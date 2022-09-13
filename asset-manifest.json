@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/AnimeBinge/static/css/main.2c473528.css",
+    "main.js": "/AnimeBinge/static/js/main.daa5e876.js",
+    "static/media/img5.png": "/AnimeBinge/static/media/img5.c6a6442c573446c31ad0.png",
+    "static/media/img2.png": "/AnimeBinge/static/media/img2.8c128f584b376d78c036.png",
+    "static/media/img3.png": "/AnimeBinge/static/media/img3.e9a789dd5df676b19d9b.png",
+    "static/media/bg.png": "/AnimeBinge/static/media/bg.075347270c18421c71b4.png",
+    "static/media/img6.png": "/AnimeBinge/static/media/img6.fe09f0def05462d2728b.png",
+    "static/media/img4.png": "/AnimeBinge/static/media/img4.1bb873856a1544a39dd4.png",
+    "static/media/img1.png": "/AnimeBinge/static/media/img1.cc21ddbedfef45bf1a16.png",
+    "static/media/img7.jpeg": "/AnimeBinge/static/media/img7.ec75665fe7a80c4c6371.jpeg",
+    "index.html": "/AnimeBinge/index.html",
+    "main.2c473528.css.map": "/AnimeBinge/static/css/main.2c473528.css.map",
+    "main.daa5e876.js.map": "/AnimeBinge/static/js/main.daa5e876.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c473528.css",
+    "static/js/main.daa5e876.js"
+  ]
+}
