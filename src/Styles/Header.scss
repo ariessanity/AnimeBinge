@@ -1,0 +1,65 @@
+@import "./Variables.scss";
+
+.header {
+  height: 100vh;
+  color: $color-light;
+  padding: 4rem 6rem;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(255, 0, 0, 0) 50%
+    ),
+    linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 0) 50%),
+    url("../img/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__text {
+    font-size: 2rem;
+    width: 40%;
+
+    & > * {
+      margin-bottom: 1rem;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+
+      & > * {
+        margin-right: 1rem;
+
+        a:link,
+        a:visited {
+          color: $color-light;
+          text-decoration: none;
+          display: flex;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+
+    strong {
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}

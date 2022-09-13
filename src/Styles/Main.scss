@@ -1,0 +1,30 @@
+.main {
+  padding: 2rem 0rem 2rem 6rem;
+
+  h2 {
+    margin: 2rem 0;
+    span {
+      color: #fbc94a;
+    }
+  }
+
+  &__trending-card {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+
+    & > * {
+      margin-right: 1rem;
+    }
+  }
+
+  &__card-throwback {
+    display: flex;
+    align-items: center;
+    margin-right: 6rem;
+
+    & > * {
+      margin-right: 2rem;
+    }
+  }
+}

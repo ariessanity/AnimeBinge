@@ -1,0 +1,14 @@
+@import "./Variables.scss";
+
+.btn-dark {
+  color: $color-light;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  display: flex;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

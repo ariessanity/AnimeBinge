@@ -1,0 +1,12 @@
+@import "./Variables.scss";
+
+.btn-light {
+  color: $color-light;
+  border: 1px solid $color-light;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

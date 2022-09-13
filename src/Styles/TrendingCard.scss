@@ -1,0 +1,44 @@
+@import "./Variables.scss";
+
+.trending-card {
+  font-size: 1.5rem;
+  height: 18.18rem;
+  width: 32.25rem;
+  position: relative;
+  color: $color-light;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(255, 0, 0, 0) 100%
+  );
+  &__img {
+    position: absolute;
+    border-radius: 15px;
+    height: 18.18rem;
+    width: 32.25rem;
+    z-index: -1;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
+  &__category {
+    font-size: 0.9rem;
+    color: $color-grey;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+  }
+
+  &__rating {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 1;
+  }
+}
