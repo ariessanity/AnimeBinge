@@ -1,8 +1,39 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
 
-.image {
+
+.throwback-card {
   height: 26.68rem;
   width: 25.26rem;
   border-radius: 20px;
-  border: 1px solid $color-light;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include respond(bg){
+    height: 15rem;
+    width: 20rem;
+  }
+
+  @include respond(md) {
+    height: 12rem;
+    width: 15rem;
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid $color-light;
+
+    @include respond(bg) {
+      height: 15rem;
+      width: 20rem;
+    }
+
+    @include respond(md) {
+      height: 12rem;
+      width: 15rem;
+    }
+  }
 }

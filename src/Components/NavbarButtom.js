@@ -3,21 +3,21 @@ import "../Styles/NavbarButtom.scss";
 
 function NavbarButtom() {
   return (
-    <nav className="navbar">
-      <ul className="navbar__list">
-        <li className="navbar__list-item">
+    <div className="header-footer">
+      <ul className="header-footer__list">
+        <li className="header-footer__list--item">
           <a href="#">Overview</a>
         </li>
-        <li className="navbar__list-item">
+        <li className="header-footer__list--item">
           <a href="#">Episodes</a>
         </li>
-        <li className="navbar__list-item">
+        <li className="header-footer__list--item">
           <a href="#">Details</a>
         </li>
       </ul>
 
       <h1></h1>
-    </nav>
+    </div>
   );
 }
 

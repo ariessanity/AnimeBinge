@@ -47,8 +47,9 @@ function Main() {
       <h2>Throwback Anime!</h2>
 
       <div className="main__card-throwback">
-        <ThrowbackCard img={img3} />
         <ThrowbackCard img={img2} />
+        <ThrowbackCard img={img3} />
+
         <ThrowbackCard img={img1} />
       </div>
     </main>

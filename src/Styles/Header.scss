@@ -1,27 +1,36 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
 
 .header {
   height: 100vh;
   color: $color-light;
-  padding: 4rem 6rem;
-  background-image: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 1) 10%,
-      rgba(255, 0, 0, 0) 50%
-    ),
-    linear-gradient(to right, rgba(0, 0, 0, 1) 10%, rgba(255, 0, 0, 0) 50%),
+  padding: 4% 10%;
+  background-image: linear-gradient(to left, $color-black 10%, $color-red 50%),
+    linear-gradient(to right, $color-black 10%, $color-red 50%),
     url("../img/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  @include respond(md) {
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.8) 10%,
+        rgba(255, 0, 0, 0) 50%
+      ),
+      linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, rgba(255, 0, 0, 0) 50%),
+      url("../img/bg.png");
+  }
+
   &__text {
     font-size: 2rem;
-    width: 40%;
+    width: 50%;
+
+    @include respond(lg) {
+      width: 80%;
+    }
 
     & > * {
       margin-bottom: 1rem;
@@ -39,6 +48,12 @@
           color: $color-light;
           text-decoration: none;
           display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include respond(md) {
+            font-size: 0.8rem;
+          }
         }
       }
     }
@@ -46,6 +61,10 @@
     h1 {
       font-size: 3.5rem;
       font-weight: 700;
+
+      @include respond(md) {
+        font-size: 2.5rem;
+      }
     }
 
     h5 {
@@ -60,6 +79,10 @@
     p {
       font-size: 1rem;
       font-weight: 400;
+
+      @include respond(md) {
+        font-size: 0.75rem;
+      }
     }
   }
 }

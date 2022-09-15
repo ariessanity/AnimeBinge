@@ -1,4 +1,4 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
 
 .btn-dark {
   color: $color-light;
@@ -10,5 +10,9 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @include respond(sm) {
+    padding: 0.2rem 0.3rem;
   }
 }

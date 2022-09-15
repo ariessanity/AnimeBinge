@@ -1,63 +1,149 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
+@import "./Animations/Animations.scss";
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  div {
+  &__content {
     display: flex;
     align-items: center;
+    opacity: 1;
 
-    &:not(:last-child) {
+    & > * {
       margin-right: 1rem;
+    }
+
+    &-open {
+      display: flex;
+      opacity: 1;
+      animation: moveInRight 0.5s ease-out;
+    }
+
+    &-list {
+      display: flex;
+      list-style: none;
+      font-size: 1rem;
+
+      & > * {
+        margin-right: 4rem;
+      }
+
+      &--item {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          background-color: $color-light;
+          transform-origin: middle;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: middle;
+        }
+
+        &:active:after {
+          transform: scaleX(1);
+          transform-origin: middle;
+        }
+
+        a:link,
+        a:visited {
+          color: $color-light;
+          font-weight: 100;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover {
+          color: $color-light;
+        }
+      }
     }
   }
 
-  ul {
-    display: flex;
-    list-style: none;
-    font-size: 1rem;
+  &__toggler {
+    display: none;
 
-    & > * {
-      margin-right: 4rem;
+    & > svg {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+}
+
+@include respond(lg) {
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__title {
+      flex: 0 0 70%;
+      margin-bottom: 1rem;
     }
 
-    li {
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        background-color: $color-light;
-        transform-origin: middle;
-        transition: transform 0.3s ease-out;
+    &__content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      opacity: 0;
+
+      & > * {
+        margin-right: 1rem;
       }
 
-      &:hover:after {
-        transform: scaleX(1);
-        transform-origin: middle;
+      &-open {
+        opacity: 1;
       }
 
-      &:active:after {
-        transform: scaleX(1);
-        transform-origin: middle;
-      }
+      &-list {
+        flex: 0 0 100%;
+        margin-bottom: 1rem;
 
-      a:link,
-      a:visited {
-        color: $color-light;
-        font-weight: 100;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
+        & > * {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &__toggler {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}
+
+@include respond(md) {
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__title {
+      flex: 0 0 50%;
+      margin-bottom: 1rem;
+    }
+
+    &__content {
+      align-items: center;
+      justify-content: center;
+      &-list {
         justify-content: center;
-      }
+        align-items: center;
+        margin-bottom: 1rem;
 
-      a:hover {
-        color: $color-light;
+        & > * {
+          margin-right: 1rem;
+        }
       }
     }
   }

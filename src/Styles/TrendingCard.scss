@@ -1,29 +1,65 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
 
 .trending-card {
   font-size: 1.5rem;
   height: 18.18rem;
   width: 32.25rem;
-  position: relative;
   color: $color-light;
   border-radius: 15px;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(255, 0, 0, 0) 100%
-  );
+  position: relative;
+  background-image: linear-gradient(to top, $color-black 10%, $color-red 100%);
+
+  &:hover {
+    border: 2px solid $color-light;
+  }
+
+  @include respond(lg) {
+    height: 13rem;
+    width: 26rem;
+  }
+
+  @include respond(md) {
+    height: 13rem;
+    width: 20rem;
+  }
+
+  @include respond(sm) {
+    height: 10rem;
+    width: 15rem;
+  }
+
   &__img {
     position: absolute;
     border-radius: 15px;
     height: 18.18rem;
-    width: 32.25rem;
+    width: 100%;
     z-index: -1;
+
+    @media only screen and (max-width: 62.5em) {
+      height: 13rem;
+      width: 26rem;
+    }
+
+    @media only screen and (max-width: 31.5em) {
+      height: 13rem;
+      width: 20rem;
+    }
+
+    @media only screen and (max-width: 21.5em) {
+      height: 10rem;
+      width: 15rem;
+    }
   }
 
   &__title {
     position: absolute;
     bottom: 2rem;
     left: 2rem;
+
+    @include respond(md) {
+      font-size: 1.5rem;
+      left: 1rem;
+    }
   }
 
   &__category {
@@ -32,13 +68,23 @@
     position: absolute;
     bottom: 1rem;
     left: 2rem;
+
+    @include respond(md) {
+      font-size: 0.5rem;
+      left: 1rem;
+    }
   }
 
   &__rating {
     font-size: 1rem;
     position: absolute;
     bottom: 1rem;
-    right: 2rem;
+    right: 1rem;
     z-index: 1;
+
+    @include respond(lg) {
+      top: 1rem;
+      right: 1rem;
+    }
   }
 }

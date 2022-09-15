@@ -1,10 +1,12 @@
+@import "./Variables/Variables.scss";
+
 .main {
-  padding: 2rem 0rem 2rem 6rem;
+  padding: 2% 0 2% 6%;
 
   h2 {
     margin: 2rem 0;
     span {
-      color: #fbc94a;
+      color: $color-yellow;
     }
   }
 
@@ -20,11 +22,19 @@
 
   &__card-throwback {
     display: flex;
-    align-items: center;
-    margin-right: 6rem;
 
     & > * {
       margin-right: 2rem;
+    }
+
+    @include respond(bg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & > * {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

@@ -1,14 +1,21 @@
-@import "./Variables.scss";
+@import "./Variables/Variables.scss";
 
-.navbar {
+
+.header-footer {
   &__list {
     color: $color-light;
-
+    display: flex;
+    list-style: none;
     & > *:not(:last-child) {
       margin-right: 2rem;
     }
 
-    &-item {
+    @include respond(sm) {
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    &--item {
       position: relative;
       &:after {
         content: "";
